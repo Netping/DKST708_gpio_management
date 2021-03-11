@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "1" > /sys/class/gpio/gpio86/value
+cat /sys/class/gpio/gpio85/value

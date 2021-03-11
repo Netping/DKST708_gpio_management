@@ -1,0 +1,25 @@
+#!/bin/sh
+echo "1" > /sys/class/gpio/gpio52/value
+echo "0" > /sys/class/gpio/gpio53/value
+echo "0" > /sys/class/gpio/gpio19/value
+#strobe IO1
+echo "1" > /sys/class/gpio/gpio119/value
+sleep 1
+echo "0" > /sys/class/gpio/gpio119/value
+#strobe IO2
+echo "1" > /sys/class/gpio/gpio118/value
+sleep 1
+echo "0" > /sys/class/gpio/gpio118/value
+#strobe IO3
+echo "1" > /sys/class/gpio/gpio24/value
+sleep 1
+echo "0" > /sys/class/gpio/gpio24/value
+#strobe IO4
+echo "1" > /sys/class/gpio/gpio25/value
+sleep 1
+echo "0" > /sys/class/gpio/gpio25/value
+#12V_OUT on
+echo "1" > /sys/class/gpio/gpio12/value
+#5V_OUT on
+echo "1" > /sys/class/gpio/gpio15/value
+

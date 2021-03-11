@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while [ true ]; do
+echo "***********"
+echo "IO1:"; cat /sys/class/gpio/gpio48/value
+echo "IO2:"; cat /sys/class/gpio/gpio49/value
+echo "IO3:"; cat /sys/class/gpio/gpio50/value
+echo "IO4:"; cat /sys/class/gpio/gpio51/value
+sleep 1
+done

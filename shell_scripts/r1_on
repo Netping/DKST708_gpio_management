@@ -1,0 +1,28 @@
+#!/bin/sh
+if test ! -d "/sys/class/gpio/gpio117";
+then
+    echo "Need init GPIO117"
+    echo "117" > /sys/class/gpio/export
+fi
+
+if test ! -d "/sys/class/gpio/gpio77";
+then
+    echo "Need init GPIO77"
+    echo "77" > /sys/class/gpio/export
+fi
+
+if test ! -d "/sys/class/gpio/gpio78";
+then
+    echo "Need init GPIO78"
+    echo "78" > /sys/class/gpio/export
+fi
+
+echo "out" > /sys/class/gpio/gpio117/direction
+echo "out" > /sys/class/gpio/gpio77/direction
+echo "out" > /sys/class/gpio/gpio78/direction
+echo "0" > /sys/class/gpio/gpio77/value
+
+echo "1" > /sys/class/gpio/gpio78/value
+echo "1" > /sys/class/gpio/gpio77/value
+sleep 1
+echo "0" > /sys/class/gpio/gpio77/value

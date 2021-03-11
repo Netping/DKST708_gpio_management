@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while [ true ]; do
+echo "***********"
+echo "ECSPI1_SCLK:"; cat /sys/class/gpio/gpio121/value
+echo "ECSPI1_SS0:"; cat /sys/class/gpio/gpio122/value
+echo "ECSPI1_MOSI:"; cat /sys/class/gpio/gpio123/value
+echo "ECSPI1_MISO:"; cat /sys/class/gpio/gpio124/value
+sleep 1
+done

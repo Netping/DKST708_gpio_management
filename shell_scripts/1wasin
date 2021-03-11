@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "in" > /sys/class/gpio/gpio86/direction
+echo "in" > /sys/class/gpio/gpio85/direction
